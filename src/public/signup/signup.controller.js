@@ -13,7 +13,7 @@ function SignUpController(allMenuItems) {
   for (var category in allMenuItems) {
     console.log(category);
     if (category == "A") {
-        console.log(allMenuItems[category].menu_itmes)        
+        console.log(allMenuItems[category].menu_items)        
     }
     
     for (item in category.menu_items) {
