@@ -10,6 +10,10 @@ function SignUpController(allMenuItems) {
   $ctrl.user =  {} ;
   $ctrl.allMenuItems = allMenuItems;
 
+  for (var category in allMenuItems) {
+    console.log(category);
+  }  
+
   $ctrl.submit = function () {
     console.log("First name: " + $ctrl.user.firstname);
   }  
