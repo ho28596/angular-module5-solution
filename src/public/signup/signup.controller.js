@@ -12,6 +12,11 @@ function SignUpController(allMenuItems) {
 
   for (var category in allMenuItems) {
     console.log(category);
+    for (item in category.menu_items) {
+      if (item.short_name == "A1") {
+        console.log(item.short_name + " -> " + item.description)
+      }
+    }
   }  
 
   $ctrl.submit = function () {
