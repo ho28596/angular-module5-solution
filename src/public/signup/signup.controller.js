@@ -12,8 +12,9 @@ function SignUpController(allMenuItems) {
 
   for (var category in allMenuItems) {
     console.log(category);
-    console.log(category.menu_items);
-    console.log(menu_items);
+    if (category == "A") {
+        console.log(allMenuItems[category].menu_itmes)        
+    }
     
     for (item in category.menu_items) {
       if (item.short_name == "A1") {
