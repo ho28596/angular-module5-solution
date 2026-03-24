@@ -6,9 +6,10 @@ angular.module('public')
 
 function SignUpController() {
   var $ctrl = this;
+  $ctrl.user =  {} ;
 
   $ctrl.submit = function () {
-    console.log("First name: " + user.firstname);
+    console.log("First name: " + $ctrl.user.firstname);
   }  
 }
 
