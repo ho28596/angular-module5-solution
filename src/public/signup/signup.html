@@ -42,6 +42,21 @@
       </div>   
 
       <div class="form-elem">
+        <input class="form-control" type="text" name="favoritedish"
+              placeholder="Enter favorite dish short name"
+              ng-model="signUpCtrl.user.favDish.short_name"
+              ng-model-options="{ 'updateOn': 'blur'}"
+              ng-keyup="cancel($event)"
+              required menu-item-validator/>
+        <span ng-if="signUpForm.favoritedish.$pending.menuItemValidator">
+          Checking ...
+        </span>
+        <span ng-if="signUpForm.favoritedish.$error.menuItemValidator">
+          Error: Invalid value (It must be B4 or A2 and so on...)
+        </span>
+      </div>
+ 
+      <div class="form-elem">
         <button
           ng-disabled="regForm.$invalid"
           ng-click="signUpCtrl.submit()">
