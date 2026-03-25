@@ -4,8 +4,8 @@
 angular.module('public')
 .controller('SignUpController', SignUpController);
 
-SignUpController.$inject = ['allMenuItems'];  
-function SignUpController(allMenuItems) {
+SignUpController.$inject = ['$rootScope', 'allMenuItems'];  
+function SignUpController($rootScope, allMenuItems) {
   var $ctrl = this;
   $ctrl.user =  {} ;
   $ctrl.allMenuItems = allMenuItems;
@@ -18,6 +18,8 @@ function SignUpController(allMenuItems) {
         for (var item in $ctrl.allMenuItems[category].menu_items) {
           if ($ctrl.allMenuItems[category].menu_items[item].short_name == $ctrl.user.favDish.short_name) {
             $ctrl.user.favDish.name = $ctrl.allMenuItems[category].menu_items[item].name;
+            $ctrl.user.favDish.description = $ctrl.allMenuItems[category].menu_items[item].description;
+            $ctrl.user.favDish.category = category;
             return true;
           }            
         }
@@ -27,7 +29,7 @@ function SignUpController(allMenuItems) {
   }  
 
   $ctrl.submit = function () {
-    console.log("First name: " + $ctrl.user.firstname);
+    $rootScope.user = $ctrl.user;
   }  
 
 }
