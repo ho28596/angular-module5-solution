@@ -11,7 +11,9 @@ function SignUpController(allMenuItems) {
   $ctrl.allMenuItems = allMenuItems;
 
   $ctrl.checkFavorite = function () {
-    console.log("Favorite dish: " + $ctrl.user.favDish.short_name);
+    IF ($ctrl.user.favDish.short_name) {
+      console.log("Favorite dish: " + $ctrl.user.favDish.short_name);
+    }
   }  
 
   $ctrl.submit = function () {
