@@ -122,10 +122,8 @@ input {
 .out-box {
   background-color: #FFFFFF;
   color: #000000;
-  min-height: 26px;
-  margin-bottom: 20px;  
+  min-height: 25px;  
 }
-
 
 .ng-touched.ng-valid {
   border: 2px green solid;
