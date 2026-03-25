@@ -50,9 +50,8 @@
         <input type="text" name="favoritedish"
               placeholder="Enter favorite dish short name"
               ng-model="signUpCtrl.user.favDish.short_name"
-              validator="true == signUpCtrl.checkFavorite()"
               required>
-        <span ng-if="regForm.favoritedish.$touched && regForm.favoritedish.$invalid">
+        <span ng-if="regForm.favoritedish.$touched && (false == signUpCtrl.checkFavorite())">
           Error: Invalid value (It must be B4 or A2 and so on...)
         </span>
       </div>
