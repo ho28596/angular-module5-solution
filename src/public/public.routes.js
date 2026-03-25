@@ -51,7 +51,7 @@ function routeConfig ($stateProvider) {
           return MenuService.getAllMenuItems();
         }]
       }
-    });
+    })
     .state('public.myinfo', {
       url: '/myinfo',
       templateUrl: 'src/public/myinfo/myinfo.html',
