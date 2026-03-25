@@ -11,9 +11,16 @@ function SignUpController(allMenuItems) {
   $ctrl.allMenuItems = allMenuItems;
 
   $ctrl.checkFavorite = function () {
-    IF ($ctrl.user.favDish.short_name) {
-      console.log("Favorite dish: " + $ctrl.user.favDish.short_name);
+    if ($ctrl.user.favDish.short_name) {
+      for (var category in allMenuItems) {
+        for (var item in allMenuItems[category].menu_items) {
+          if (item.short_name == $ctrl.user.favDish.short_name) {
+            return true;
+          }            
+        }
+      }
     }
+    return false;
   }  
 
   $ctrl.submit = function () {
