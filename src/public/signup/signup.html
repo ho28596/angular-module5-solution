@@ -26,6 +26,7 @@
       </div>   
 
       <div class="form-elem">
+        <div>Email address : </div>
         <input type="email" name="email" placeholder="Email"
           ng-model="signUpCtrl.user.email"
           required>
@@ -35,6 +36,7 @@
       </div>   
 
       <div class="form-elem">
+        <div>Phone number : </div>
         <input type="text" name="phone" placeholder="Phone ###-###-####"
           ng-model="signUpCtrl.user.phone"
           pattern="(\d{3})-(\d{3})-(\d{4})">
@@ -44,16 +46,12 @@
       </div>   
 
       <div class="form-elem">
+        <div>Favorite dish short name : </div>
         <input type="text" name="favoritedish"
               placeholder="Enter favorite dish short name"
               ng-model="signUpCtrl.user.favDish.short_name"
-              ng-model-options="{ 'updateOn': 'blur'}"
-              ng-keyup="cancel($event)"
-              required menu-item-validator/>
-        <span ng-if="signUpForm.favoritedish.$pending.menuItemValidator">
-          Checking ...
-        </span>
-        <span ng-if="signUpForm.favoritedish.$error.menuItemValidator">
+              required>
+        <span ng-if="signUpCtrl.checkFavorite()">
           Error: Invalid value (It must be B4 or A2 and so on...)
         </span>
       </div>
