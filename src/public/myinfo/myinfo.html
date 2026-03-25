@@ -4,15 +4,27 @@
   </div>
   <div ng-if="myInfoCtrl.user.firstname">
     <h1>Your information</h1>
+    
     <div>
-      <div class="col-md-4">First name:</div>
-      <div class="col-md-8">{{myInfoCtrl.user.firstname}}</div>
-    </div>  
-    <p>First name:    {{myInfoCtrl.user.firstname}}</p>
-    <p>Last  name:    {{myInfoCtrl.user.lastname}}</p>
-    <p>Email Address: {{myInfoCtrl.user.email}}</p>
-    <p>Phone Number:  {{myInfoCtrl.user.phone}}</p>
+      <div class="col-md-3">Firstname</div>
+      <div class="out-box col-md-6">{{myInfoCtrl.user.firstname}}</div>
+    </div>
 
+    <div>
+      <div class="col-md-3">Lastname</div>
+      <div class="out-box col-md-6">{{myInfoCtrl.user.lasttname}}</div>
+    </div>
+    
+    <div>
+      <div class="col-md-3">Email</div>
+      <div class="out-box col-md-6">{{myInfoCtrl.user.email}}</div>
+    </div>
+    
+    <div>
+      <div class="col-md-3">Phone Number</div>
+      <div class="out-box col-md-6">{{myInfoCtrl.user.phone}}</div>
+    </div>
+    
     <h2>Your favorite dish</h2>
     <div class="media">
       <div class="media-left">
