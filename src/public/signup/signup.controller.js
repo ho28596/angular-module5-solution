@@ -18,6 +18,9 @@ function SignUpController(allMenuItems) {
           console.log($ctrl.allMenuItems[category].menu_items);
         }
         for (var item in $ctrl.allMenuItems[category].menu_items) {
+          if (category=="A"){
+            console.log(item);
+          }
           if (item.short_name == $ctrl.user.favDish.short_name) {
             console.log("Items found: " + $ctrl.user.favDish.short_name);
             return true;
