@@ -1,9 +1,10 @@
-  <div>
+  <div class="signup-form">
     <h1>Newsletter registration form</h1>
 
     <form name='regForm' novalidate>
 
       <div class="form-elem">
+        <div>Firstname : </div>
         <input type="text" name="firstname" placeholder="Enter your first name"
           ng-model="signUpCtrl.user.firstname"
           required>
@@ -14,6 +15,7 @@
       </div>   
 
       <div class="form-elem">
+        <div>Lastname : </div>
         <input type="text" name="lastname" placeholder="Enter your last name"
           ng-model="signUpCtrl.user.lastname"
           required>
