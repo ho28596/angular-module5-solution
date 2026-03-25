@@ -12,6 +12,7 @@ function SignUpController(allMenuItems) {
 
   $ctrl.checkFavorite = function () {
     if ($ctrl.user.favDish.short_name) {
+      $ctrl.user.favDish.short_name.toUpperCase();
       for (var category in allMenuItems) {
         for (var item in allMenuItems[category].menu_items) {
           if (item.short_name == $ctrl.user.favDish.short_name) {
