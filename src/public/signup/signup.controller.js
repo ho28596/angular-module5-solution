@@ -7,6 +7,7 @@ angular.module('public')
 SignUpController.$inject = ['$rootScope', 'allMenuItems'];  
 function SignUpController($rootScope, allMenuItems) {
   var $ctrl = this;
+  $ctrl.messageOK = "";
   $ctrl.user =  {} ;
   $ctrl.allMenuItems = allMenuItems;
 
@@ -30,6 +31,7 @@ function SignUpController($rootScope, allMenuItems) {
 
   $ctrl.submit = function () {
     $rootScope.user = $ctrl.user;
+    $ctrl.messageOK = "Your information has been saved";
   }  
 
 }
