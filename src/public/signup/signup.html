@@ -51,7 +51,7 @@
               placeholder="Enter favorite dish short name"
               ng-model="signUpCtrl.user.favDish.short_name"
               required>
-        <span ng-if="signUpCtrl.checkFavorite()">
+        <span ng-if="regForm.favoritedish.$touched && signUpCtrl.checkFavorite()">
           Error: Invalid value (It must be B4 or A2 and so on...)
         </span>
       </div>
