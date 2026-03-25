@@ -51,7 +51,7 @@
               placeholder="Enter favorite dish short name (e.g. A1 or B4)"
               ng-model="signUpCtrl.user.favDish.short_name"
               required>
-        <span ng-if="regForm.favoritedish && regForm.favoritedish.$touched && (false == signUpCtrl.checkFavorite())">
+        <span ng-if="regForm.favoritedish != "" && regForm.favoritedish.$touched && (false == signUpCtrl.checkFavorite())">
           The short name typed doesn't exist
         </span>
         <span>
