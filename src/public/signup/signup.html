@@ -52,7 +52,7 @@
               ng-model="signUpCtrl.user.favDish.short_name"
               required>
         <span ng-if="regForm.favoritedish.$touched && (false == signUpCtrl.checkFavorite())">
-          The short name typed doesn't exist
+          No such menu number exists
         </span>
         <span>
           {{ signUpCtrl.user.favDish.name }}
@@ -67,6 +67,11 @@
           Submit
         </button>
       </div>
+      <br>
+      
+      <div>
+        {{ signUpCtrl.messageOK }}
+      </div>  
 
     </form>
     
