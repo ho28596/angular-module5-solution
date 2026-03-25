@@ -10,22 +10,14 @@ function SignUpController(allMenuItems) {
   $ctrl.user =  {} ;
   $ctrl.allMenuItems = allMenuItems;
 
-  for (var category in allMenuItems) {
-    console.log(category);
-    if (category == "A") {
-        console.log(allMenuItems[category].menu_items)        
-    }
-    
-    for (item in category.menu_items) {
-      if (item.short_name == "A1") {
-        console.log(item.short_name + " -> " + item.description)
-      }
-    }
+  $ctrl.checkFavorite = function () {
+    console.log("Favorite dish: " + $ctrl.user.favDish.short_name);
   }  
 
   $ctrl.submit = function () {
     console.log("First name: " + $ctrl.user.firstname);
   }  
+
 }
 
 })();
