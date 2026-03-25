@@ -58,7 +58,7 @@
  
       <div class="form-elem">
         <button
-          ng-disabled="regForm.$invalid"
+          ng-disabled="regForm.$invalid || (false == signUpCtrl.checkFavorite())"
           ng-click="signUpCtrl.submit()">
           Submit
         </button>
